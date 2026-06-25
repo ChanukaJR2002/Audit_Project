@@ -41,7 +41,7 @@ def is_valid_pdf(pdf_file):
         pdf_file.seek(0)
         if header != b"%PDF-":
             return False
-        # Try to actually open it with PyPDF2 to catch corrupted/fake PDFs
+        # Try to actually open file with PyPDF2 to catch corrupted/fake PDFs
         PdfReader(pdf_file)
         pdf_file.seek(0)
         return True
