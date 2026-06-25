@@ -7,10 +7,10 @@ import faiss
 import numpy as np
 from google import genai
 
-# 1.Configuration
+# 1. Configuration
 st.set_page_config(page_title="Think Before You Sign - AI Contract Auditor", page_icon="⚖️", layout="wide")
 
-## 2.Assign Gemini API key
+# 2. Assign Gemini API key
 try:
     # Look inside Streamlit secrets (.streamlit/secrets.toml)
     if "GEMINI_API_KEY" in st.secrets:
@@ -31,7 +31,7 @@ def load_embedding_model():
 
 embedding_model = load_embedding_model()
 
-# 4.Processing PDFs
+# 4. Processing PDFs
 def is_valid_pdf(pdf_file):
     """Checks the actual file signature/structure, not just the extension, to confirm it's a real PDF."""
     try:
@@ -187,7 +187,7 @@ if uploaded_file is not None:
     with st.spinner("Analyzing document structure..."):
         raw_text = extract_text_from_pdf(uploaded_file)
 
-        # Catch PDFs that parsed but contain no extractable text (e.g. scanned image-only PDFs)
+        # Catch PDFs that parsed but contain no extractable text
         if not raw_text or not raw_text.strip():
             st.error(
                 "⚠️ No readable text could be extracted from this PDF. "
@@ -271,7 +271,7 @@ if uploaded_file is not None:
                 with st.chat_message("assistant"):
                     st.markdown(a)
 
-    # Display chat bar in the bottom after uploading a doument
+    # Display chat bar in the bottom after uploading a document
     custom_query = st.chat_input("Ask a specific question about this contract...")
     if custom_query:
         with st.spinner("Retrieving context and answering your question..."):
