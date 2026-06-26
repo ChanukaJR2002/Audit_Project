@@ -43,7 +43,7 @@ Audit_Project/
 
 1. Clone the repository:
    ```
-   git clone <your-repo-url>
+   git clone https://github.com/ChanukaJR2002/Audit_Project.git
    cd Audit_Project
    ```
 
