@@ -113,4 +113,4 @@ The app will open in your browser, usually at `http://localhost:8501`.
 ---------------
 ## Name - Chanuka Rajapaksa
 ## GitHub - [@ChanukaJR2002](https://github.com/)
-## Linkedin - https://www.linkedin.com/feed/
+## Linkedin - https://www.linkedin.com/in/chanuka-rajapaksa-14b9533a1/
