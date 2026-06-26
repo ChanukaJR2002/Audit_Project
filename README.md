@@ -27,7 +27,7 @@ An AI-powered Streamlit application that scans contracts and lease documents (PD
 
 ```
 Audit_Project/
-├── app1.py                  # Main Streamlit application
+├── app.py                  # Main Streamlit application
 ├── .streamlit/
 │   └── secrets.toml          # API keys (not committed to git)
 ├── .gitignore
@@ -57,9 +57,9 @@ Audit_Project/
    ```
 
 3. Install dependencies:
-   
+```
    pip install -r requirements.txt
-   ```
+```
 
 4. Add your Gemini API key. Create a file at `.streamlit/secrets.toml` with the following content:
    ```toml
